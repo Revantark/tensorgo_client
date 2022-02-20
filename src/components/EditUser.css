@@ -1,0 +1,43 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100vw;
+    margin-top: 2rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.form span {
+    font-size: 1.34rem;
+    margin-bottom: 1rem;
+}
+.form p{
+    margin: 0;
+    margin-bottom: 0.2rem;
+}
+.btns {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+ button {
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.116);
+    background: white;
+    padding: 0.5rem 1rem ;
+}
+ button:hover{
+    background: black;
+    color: white;
+}
+.form input {
+    height: 26px;
+    width: 300px;
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid rgb(197, 197, 197);
+}
