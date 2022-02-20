@@ -17,7 +17,7 @@ export default function     Table() {
       setUsers((await res.json()).res)
     };
     fetchData()
-  }, []);
+  }, [users]);
 
   const exportAsCSV = async ()=>{
       try {
@@ -36,12 +36,27 @@ export default function     Table() {
           
       }
   }
+  const fetchAndSave = async ()=>{
+    try {
+      const res = await fetch(process.env.REACT_APP_URL + "save-users", {
+          method: "GET",
+          
+        });
+      setUsers([])
+    } catch (error) {
+        
+    }
+}
 
   return (
     <div className="table">
       <div className="nottable" >
       <span>User details</span>
+      <div style={{display:"flex",gap:'1rem'}} >
+      <button onClick={()=>fetchAndSave()} >Fetch and save</button>
+
       <button onClick={()=>exportAsCSV()} >Export as CSV</button>
+      </div>
       </div>
 
       <table>
